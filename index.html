@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>モダンサイト</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="logo" href="#">Brand</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+        <ul id="menu" class="nav-list">
+          <li><a href="#features">特徴</a></li>
+          <li><a href="#about">概要</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-label="ヒーローセクション">
+        <h1>シンプルでモダンなウェブサイト</h1>
+        <p>HTML・CSS・JavaScriptの基礎を使って構築します。</p>
+        <a class="btn btn-primary" href="#features">始める</a>
+      </section>
+
+      <section id="features" class="features">
+        <h2>特徴</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>レスポンシブ</h3>
+            <p>モバイルからデスクトップまで自動で調整。</p>
+          </article>
+          <article class="card">
+            <h3>アクセシブル</h3>
+            <p>見出し構造と ARIA で使いやすく。</p>
+          </article>
+          <article class="card">
+            <h3>軽量</h3>
+            <p>最小限のコードで高速表示。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <h2>概要</h2>
+        <p>学習用に最小構成で設計しています。</p>
+      </section>
+
+      <section id="contact" class="contact">
+        <h2>お問い合わせ</h2>
+        <form id="contact-form" novalidate>
+          <label>
+            名前
+            <input name="name" type="text" required minlength="2" />
+          </label>
+          <label>
+            メール
+            <input name="email" type="email" required />
+          </label>
+          <label>
+            メッセージ
+            <textarea name="message" required minlength="10"></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">送信</button>
+        </form>
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small>© 2025 Brand</small>
+      <button id="theme-toggle" class="btn">テーマ切替</button>
+    </footer>
+
+    <script src="scripts/main.js" defer></script>
+  </body>
+</html>
